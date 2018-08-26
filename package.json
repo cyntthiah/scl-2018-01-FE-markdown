@@ -1,0 +1,24 @@
+{
+  "name": "scl-2018-01-fe-markdown",
+  "version": "1.0.0",
+  "description": "Markdown",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyntthiah/scl-2018-01-FE-markdown.git"
+  },
+  "author": "Cynthia Rojas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cyntthiah/scl-2018-01-FE-markdown/issues"
+  },
+  "homepage": "https://github.com/cyntthiah/scl-2018-01-FE-markdown#readme",
+  "dependencies": {
+    "fetch": "^1.1.0",
+    "node": "^10.9.0",
+    "node-fetch": "^2.2.0"
+  }
+}
