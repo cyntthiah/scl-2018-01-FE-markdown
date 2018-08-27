@@ -19,6 +19,7 @@
   "dependencies": {
     "eslint": "^5.4.0",
     "fetch": "^1.1.0",
+    "js": "^0.1.0",
     "node": "^10.9.0",
     "node-fetch": "^2.2.0"
   },
