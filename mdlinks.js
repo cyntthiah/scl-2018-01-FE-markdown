@@ -1,8 +1,5 @@
-const fs = require('fs');
+var fs = require('fs');
 
-fs.open('/home/cynthia/Documentos/nodejs/scl-2018-01-FE-markdown/text.text', 'r', (err, fd) => {
-  if (err) throw err;
-  fs.close(fd, (err) => {
-    if (err) throw err;
-  });
-});
+var text = fs.readFileSync('/home/cynthia/Documentos/nodejs/scl-2018-01-FE-markdown/text.text','utf8');
+console.log(text
+);
