@@ -8,6 +8,7 @@ var text = fs.readFileSync('/home/cynthia/Documentos/nodejs/scl-2018-01-FE-markd
 var arrayLinks = markdownLinkExtractor(text);
 console.log(arrayLinks);
 
+
 for(var i=0;i<arrayLinks.length;i++){
     console.log(arrayLinks[i].href);
     fetch(arrayLinks[i].href)
@@ -41,7 +42,7 @@ function markdownLinkExtractor(markdown) {
       });
     };
     renderer.image = function(href, title, text) {
-        // Remove image size at the end, e.g. ' =20%x50'
+        
         href = href.replace(/ =\d*%?x\d*%?$/, '');
         links.push({
           href: href,
@@ -53,3 +54,4 @@ function markdownLinkExtractor(markdown) {
   
     return links;
   };
+  console.log(`Current directory: ${process.cwd('./../README.md')}`);
