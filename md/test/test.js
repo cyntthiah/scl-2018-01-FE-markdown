@@ -1,6 +1,20 @@
-//example from jest
-const sum = require('./sum');
+//uppercase.js
+const Marked = require('marked');
+  return new Promise((resolve, reject) => {
+    if (!str) {
+      reject('Empty string')
+      return
+    }
+    resolve(str.toUpperCase())
+  })
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3);
-});
+
+module.exports = uppercasepwd
+//uppercase.test.js
+const uppercase = require('./uppercase')
+
+test(`uppercase 'test' to equal 'TEST'`, () => {
+  return uppercase('').catch(e => {
+    expect(e).toMatch('Empty string')
+  })
+})
