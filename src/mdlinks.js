@@ -55,3 +55,4 @@ function markdownLinkExtractor(markdown) {
     return links;
   };
  console.log(`Current directory: ${process.cwd('./../README.md')}`);
+
