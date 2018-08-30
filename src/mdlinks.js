@@ -3,17 +3,31 @@ const fetch = require('node-fetch');
 
 
 var fs = require('fs');
-
+var count = 0;
 var text = fs.readFileSync('/home/cynthia/Documentos/nodejs/scl-2018-01-FE-markdown/README.md','utf8');
 var arrayLinks = markdownLinkExtractor(text);
-console.log(arrayLinks);
+for(var line in text)
+{
+        console.log(line);
+}
+console.log(count);
 
 
 for(var i=0;i<arrayLinks.length;i++){
-    console.log(arrayLinks[i].href);
+    //console.log(arrayLinks[i].href);
+    let status = "";
     fetch(arrayLinks[i].href)
     .then(response=>{
-        console.log(response.status);
+        if(response.ok == true)
+        {
+             status =  "ok";
+        }
+        else
+        {
+            status = "broken";
+        }
+        console.log(response.url + ' is ' + status);
+        
     }) 
     .catch(err=>{
         console.log(err);

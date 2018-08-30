@@ -1,6 +1,6 @@
 //uppercase.js
-const Marked = require('marked');
-  return new Promise((resolve, reject) => {
+const text = arraylinks('text');
+  return arraylinks((resolve, reject) => {
     if (!str) {
       reject('Empty string')
       return
@@ -9,12 +9,12 @@ const Marked = require('marked');
   })
 
 
-module.exports = uppercasepwd
+module.exports = mdlinks
 //uppercase.test.js
-const uppercase = require('./uppercase')
+const mdlinks = require('./mdlinks.js')
 
 test(`uppercase 'test' to equal 'TEST'`, () => {
-  return uppercase('').catch(e => {
+  return mdlinks('').catch(e => {
     expect(e).toMatch('Empty string')
   })
 })
