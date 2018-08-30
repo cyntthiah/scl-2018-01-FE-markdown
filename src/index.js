@@ -1,2 +1,4 @@
+#!/usr/bin/env node
 
-var exports = module.exports = {};
+const mdlinks =  require('./../main/mdlinks');
+module.exports = mdlinks;

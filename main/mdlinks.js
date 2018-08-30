@@ -1,8 +1,11 @@
+#!/usr/bin/env node
+
 const Marked = require('marked');
 const fs = require('fs');
 const fetch = require('node-fetch');
-var file = '../README.md';// ubicacion del archivo
- 
+const path = require('path');
+var file = path.resolve(args[0]);// ubicacion del archivo
+const [,,...args] = process.argv;
 var text = fs.readFileSync(file,'utf8');
 var count = 0;
 var validate = false;//arg validate 
@@ -77,3 +80,4 @@ function markdownLinkExtractor(markdown) {
  
   return links;
 };
+module.exports = {'Marked': Marked};
