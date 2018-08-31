@@ -4,19 +4,19 @@ const Marked = require('marked');
 const fs = require('fs');
 const fetch = require('node-fetch');
 const path = require('path');
-var file = path.resolve(args[0]);// ubicacion del archivo
 const [,,...args] = process.argv;
+const file = path.resolve(args[0]);
+
 var text = fs.readFileSync(file,'utf8');
-var count = 0;
-var validate = false;//arg validate 
- 
+var count = 1;
+var validate = false;
  
  
  
 var lines = text.split('\n');
-for(var line of lines)//of trae contenido y no numeros
+for(var line of lines)
 {
-    let number = count++;//linea que cambia el numero
+    let number = count++;
     let textLine = markdownLinkExtractor(line);
     if(typeof textLine[0] !== "undefined")
     {
@@ -47,7 +47,7 @@ for(var line of lines)//of trae contenido y no numeros
        
     }
 }
-console.log(count);//imprime las lineas totales del texto
+console.log(count);
  
  
  
