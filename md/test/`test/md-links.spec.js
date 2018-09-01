@@ -1,16 +1,23 @@
-test('fetch response has to return ok status', done => {
-    const mdlinks =  require('./main/mdlinks');
-{
-      expect(validate).toBe('is OK');
-      done();
-    }
-    fetch(textLine[0].href).then(
-        (response)=>{
-            if(response.ok = true)
-            {
-                console.log(file + ':' + numero + ' ' + response.url + ' is OK' );
-            } fetch(textLine[0].href).then(
-                (response)=>{
-                    if(response.ok = true)
-                    {
-                        console.log(file + ':' + numero + ' ' + response.url + ' is OK' )}})})})
+// request.js
+const http = require('http');
+
+export default function request(url) {
+  return new Promise(resolve => {
+    // This is an example of an http request, for example to fetch
+    // user data from an API.
+    // This module is being mocked in __mocks__/request.js
+    http.get({path: url}, response => {
+      let data = '';
+      response.on('data', _data => (data += _data));
+      response.on('end', () => resolve(data));
+    });
+  });
+}
+fetch(textLine[0].href).then(
+    (response)=>{
+        if(response.ok = true)
+        {
+            console.log(file + ':' + number + ' ' + response.url + ' is OK' );
+        }});
+
+ 

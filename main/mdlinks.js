@@ -27,7 +27,7 @@ for(var line of lines)
                 (response)=>{
                     if(response.ok = true)
                     {
-                        console.log(file + ':' + numero + ' ' + response.url + ' is OK' );
+                        console.log(file + ':' + number + ' ' + response.url + ' is OK' );
                     }
                     else
                     {
@@ -35,7 +35,7 @@ for(var line of lines)
                     }
                 }
             ).catch((err)=>{
-                console.log(file + ':' + numero + ' ' + textLine[0].href + 'is Broken' );
+                console.log(file + ':' + number + ' ' + textLine[0].href + 'is Broken' );
             })
         }
         else{
