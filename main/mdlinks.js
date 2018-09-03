@@ -10,6 +10,10 @@ const file = path.resolve(args[0]);
 var text = fs.readFileSync(file,'utf8');
 var count = 1;
 var validate = false;
+if(args[1]== "--validate")
+{
+    validate = true;
+}
  
  
  
